@@ -1,5 +1,4 @@
 import { useEffect, useState } from 'react';
-import { useTranslation } from 'react-i18next';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { getJSON } from '@/lib/api';
 import {
@@ -11,15 +10,15 @@ import {
   BarElement,
   Tooltip,
   Legend,
+  ChartData,
 } from 'chart.js';
-import { Line } from 'react-chartjs-2';
+import { Chart } from 'react-chartjs-2';
 
 ChartJS.register(CategoryScale, LinearScale, PointElement, LineElement, BarElement, Tooltip, Legend);
 
 interface WeatherPoint { date: string; temp: number; rain: number }
 
 export default function Weather() {
-  const { t } = useTranslation();
   const [data, setData] = useState<WeatherPoint[]>([]);
 
   useEffect(() => {
@@ -36,7 +35,7 @@ export default function Weather() {
   const temps = data.map(d => d.temp);
   const rain = data.map(d => d.rain);
 
-  const chartData = {
+  const chartData: ChartData = {
     labels,
     datasets: [
       { type: 'line' as const, label: 'Temp (°C)', data: temps, borderColor: '#60a5fa', backgroundColor: '#60a5fa', tension: 0.3, yAxisID: 'y' },
@@ -63,7 +62,7 @@ export default function Weather() {
         </CardHeader>
         <CardContent>
           <div style={{ height: 400 }}>
-            <Line data={chartData} options={options} />
+            <Chart type="bar" data={chartData} options={options} />
           </div>
         </CardContent>
       </Card>

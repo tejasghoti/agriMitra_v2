@@ -1,4 +1,3 @@
-import { Link, useLocation } from 'react-i18next';
 import { useTranslation } from 'react-i18next';
 import { Link as RouterLink, Outlet } from 'react-router-dom';
 import { ChatWidget } from './chat/ChatWidget';

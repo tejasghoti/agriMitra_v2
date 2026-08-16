@@ -4,7 +4,7 @@ import Lenis from 'lenis';
 import { Link as RouterLink } from 'react-router-dom';
 import { CONTENT } from '@/content';
 import { ScrollMarquee } from '@/components/landing/ScrollMarquee';
-import { ChevronDown, ArrowRight, Github, ExternalLink } from 'lucide-react';
+import { ChevronDown, ArrowRight, ExternalLink } from 'lucide-react';
 import { useTranslation } from 'react-i18next';
 
 // Custom hook for animated counting
@@ -63,7 +63,7 @@ function AnimatedStat({ value, label }: { value: string, label: string }) {
 }
 
 export default function Landing() {
-  const { t } = useTranslation();
+  useTranslation();
   const prefersReducedMotion = useReducedMotion();
   const [heroImageIndex, setHeroImageIndex] = useState(0);
   
@@ -122,8 +122,8 @@ export default function Landing() {
           <a href="#faq" className="hover:text-green-700 transition-colors">FAQ</a>
         </div>
         <div className="flex gap-3">
-          <a href="https://github.com" target="_blank" rel="noreferrer" className="hidden md:flex items-center gap-2 px-4 py-2 rounded-full bg-slate-100 hover:bg-slate-200 text-sm font-semibold transition-colors">
-            <Github size={16} /> GitHub
+          <a href="https://github.com/tejasghoti/agriMitra_v2" target="_blank" rel="noreferrer" className="hidden md:flex items-center gap-2 px-4 py-2 rounded-full bg-slate-100 hover:bg-slate-200 text-sm font-semibold transition-colors">
+            &#60;/&#62; GitHub
           </a>
           <RouterLink to="/app" className="bg-green-600 text-white px-5 py-2 rounded-full text-sm font-bold hover:bg-green-700 transition-colors shadow-sm">
             View Live Demo

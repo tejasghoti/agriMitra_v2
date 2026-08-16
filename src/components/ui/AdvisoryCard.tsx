@@ -1,11 +1,9 @@
 import { useEffect, useState } from 'react';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { getJSON } from '@/lib/api';
-import { useTranslation } from 'react-i18next';
 import { Lightbulb, AlertTriangle, CheckCircle2 } from 'lucide-react';
 
 export function AdvisoryCard({ commodity = "Tomato", market = "Pune" }) {
-  const { t } = useTranslation();
   const [advisory, setAdvisory] = useState<{recommendation: string, confidence: string} | null>(null);
 
   useEffect(() => {
@@ -27,7 +25,7 @@ export function AdvisoryCard({ commodity = "Tomato", market = "Pune" }) {
       <CardHeader className="pb-2">
         <CardTitle className="flex items-center gap-2 text-green-900">
           <Icon className={color} />
-          {t('sell_or_hold')} ({commodity} - {market})
+          Sell or Hold? ({commodity} - {market})
         </CardTitle>
       </CardHeader>
       <CardContent>

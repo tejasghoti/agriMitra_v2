@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import { LineChart } from '@/components/charts/LineChart';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
-import { getJSON, postJSON } from '@/lib/api';
+import { getJSON } from '@/lib/api';
 import { AdvisoryCard } from '@/components/ui/AdvisoryCard';
 
 interface PricePoint { date: string; price: number }
