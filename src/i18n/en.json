@@ -1,0 +1,11 @@
+{
+  "dashboard": "Dashboard",
+  "market": "Mandi Prices",
+  "weather": "Weather",
+  "advisory": "Advisory",
+  "as_of": "As of",
+  "ask_me": "Ask me anything...",
+  "sell_or_hold": "Sell or Hold?",
+  "history": "History (Last 60 Days)",
+  "forecast": "Forecast (Next 7 Days)"
+}

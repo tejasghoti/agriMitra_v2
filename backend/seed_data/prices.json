@@ -1,0 +1,18 @@
+[
+  {
+    "commodity": "Tomato",
+    "market": "Pune",
+    "date": "2023-10-01",
+    "price": 25.5,
+    "moving_average_7d": 24.0,
+    "percent_change_7d": 5.2
+  },
+  {
+    "commodity": "Onion",
+    "market": "Nashik",
+    "date": "2023-10-01",
+    "price": 18.0,
+    "moving_average_7d": 17.5,
+    "percent_change_7d": 2.8
+  }
+]
